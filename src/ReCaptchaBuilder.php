@@ -74,7 +74,7 @@ class ReCaptchaBuilder
     /**
      * The API request URI
      */
-    protected $api_url = 'https://www.google.com/recaptcha/api/siteverify';
+    protected $api_url = 'https://www.recaptcha.net/recaptcha/api/siteverify';
 
     /**
      * ReCaptchaBuilder constructor.
@@ -233,7 +233,7 @@ class ReCaptchaBuilder
 
         // Create query string
         $query = ($query) ? '?' . http_build_query($query) : "";
-        $html .= "<script src=\"https://www.google.com/recaptcha/api.js" . $query . "\" async defer></script>";
+        $html .= "<script src=\"https://www.recaptcha.net/recaptcha/api.js" . $query . "\" async defer></script>";
 
         return $html;
     }
